@@ -1,7 +1,6 @@
 package main
 
 import (
-	"appname/models"
 	"appname/routers"
 	"appname/utils"
 	"log"
@@ -14,10 +13,6 @@ func main() {
 	e := echo.New()
 	e.Use(middleware.CORS())
 	err := utils.Config()
-	if err != nil {
-		log.Fatal(err)
-	}
-	err = models.InitDatabase()
 	if err != nil {
 		log.Fatal(err)
 	}
