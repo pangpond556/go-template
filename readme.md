@@ -7,13 +7,13 @@ Simply REST API template with Golang and Mongodb
 
 ### Development
 
-1. Create .env from .env.example
+- Create .env from .env.example
 
-2. ```sh
+```
 $ go mod init "appname"
 ```
 
 ##### To start application:
-```sh
+```
 $ go run app.go
 ```
