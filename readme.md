@@ -9,13 +9,8 @@ Simply REST API template with Golang and Mongodb
 
 1. Create .env from .env.example
 
-2. Uncomment "github.com/joho/godotenv" in models/init.go
-
-3. Change "appname" to your application name in [ app.go, routers, controllers ]
-
-##### Init application:
-```sh
-$ go mod init your_app_name
+2. ```sh
+$ go mod init "appname"
 ```
 
 ##### To start application:

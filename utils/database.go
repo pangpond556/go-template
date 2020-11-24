@@ -12,11 +12,12 @@ import (
 func InitDatabase() (*mongo.Client, context.Context, context.CancelFunc, error) {
 	var err error
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
-	// defer cancel()
-	options := options.Client().ApplyURI(MongoConnect)
+	options := options.Client().ApplyURI(MongoURI)
 	client, err := mongo.Connect(ctx, options)
 	if err != nil {
 		return nil, nil, cancel, err
 	}
+
+	// do not forget to cancel()
 	return client, ctx, cancel, nil
 }

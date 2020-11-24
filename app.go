@@ -1,9 +1,8 @@
 package main
 
 import (
-	"appname/routers"
+	"appname/routes"
 	"appname/utils"
-	"log"
 
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
@@ -12,13 +11,13 @@ import (
 func main() {
 	e := echo.New()
 	e.Use(middleware.CORS())
-	err := utils.Config()
+	err := utils.Init()
 	if err != nil {
-		log.Fatal(err)
+		e.Logger.Fatal(err)
 	}
 
 	// Register Routes
-	routers.HomeRoutes(e)
+	routes.HomeRoutes(e)
 
 	e.Logger.Fatal(e.Start(":1323"))
 }
