@@ -6,10 +6,8 @@ Simply REST API template with Golang and Mongodb
 - Mongo driver https://github.com/mongodb/mongo-go-driver
 
 ### Development
-
-- Create .env from .env.example
-
 ```
+# create .env from .env.example
 $ go mod init "appname"
 ```
 
